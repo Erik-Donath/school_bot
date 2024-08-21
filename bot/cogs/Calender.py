@@ -83,7 +83,7 @@ class Calender(commands.Cog):
                 value="",
                 inline=False
             )
-        
+
         if self.last_message:
             await self.last_message.delete()
         self.last_message = await channel.send(embed=embed)

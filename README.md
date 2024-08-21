@@ -2,8 +2,8 @@
 Dieser Discord Bot ermöglicht es, die Einträge eines Moodle Kalenders in einen Discord Channel zu schreiben.
 
 # Requirements
-Damit dieser Bot funktioniert, muss Python 3.12 zusammen mit den Paketen in ```requirements.txt``` installiert sein (Siehe: Install Sektion).
-Für die Funktion des Bots müssen die Konfigurations-Dateien im Ordner ```config/``` angepasst werden (Siehe: How to use Sektion).
+Damit dieser Bot funktioniert, muss Python 3.12 zusammen mit den Paketen in ```requirements.txt``` installiert sein (Siehe: [Install](#install)).
+Damit der Bot funktioniert müssen die Konfigurations-Dateien im Ordner ```config/``` angepasst werden (Siehe: [How to use](#how-to-use)).
 
 # Install
 Windows:<br>
@@ -20,7 +20,7 @@ Für das Starten des Bots muss folgender command ausgeführt werden: ```python3 
 Beim ersten start wird das Programm den Ordner ```config``` erstellen und sich dann Beenden. In diesem werden die Dateien ```config.cfg``` und ```calender.cfg``` erstellt.<br>
 <br>
 Verändere folgende Felder nach der untenstehenden Beschreibung.
-``` cfg
+```
 config.cfg:
     [Discord]
     activity = <Aktivitäts Nachricht des Bots>
@@ -46,3 +46,6 @@ calender.cfg:
     message = <Kurze Wilkommensnachricht>
     description = <Kurze Beschreibung unter der Wilkommensnachricht>
 ```
+
+# Disclaimer
+This project is licensed under the [MIT license](LICENSE). Use on own risk.
