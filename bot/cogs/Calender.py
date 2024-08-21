@@ -90,7 +90,7 @@ class Calender(commands.Cog):
 
 
 def setup(bot: discord.Bot) -> None:
-    config = Cfg.Config("config\\calender.cfg", {
+    config = Cfg.Config("./config/calender.cfg", {
         ("Moodle", "domain"): "moodle.moodleapp.com",
         ("Moodle", "userid"): "0",
         ("Moodle", "token"): "0",

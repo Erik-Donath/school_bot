@@ -27,7 +27,7 @@ def main() -> None:
     locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
     print(f"Started on {datetime.datetime.now().strftime('%Y-%m-%d at %H:%M:%S')}");
 
-    config = Cfg.Config("config\\config.cfg", {
+    config = Cfg.Config("./config/config.cfg", {
         ("Discord", "activity"): "None",
         ("Discord", "prefix"): "!",
         ("Discord", "token"): "<TOKEN>",

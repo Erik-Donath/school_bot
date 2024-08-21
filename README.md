@@ -14,9 +14,12 @@ Linux (debian):<br>
     1. ```sudo apt update```<br>
     2. ```sudo apt install python3 python3-pip```<br>
     3. ```pip3 install -r requirements.txt```<br>
+Docker:<br>
+    1. ```docker build . -t school_bot```<br>
 
 # How to use
-Für das Starten des Bots muss folgender command ausgeführt werden: ```python3 Run.py```<br>
+Für Linux und Windows muss folgender Command ausgeführt werden: ```python3 Run.py```<br>
+Unter Docker muss folgender Command ausgeführt werden: ```docker run --rm -it -v ./config:/bot/config school_bot```.<br>
 Beim ersten start wird das Programm den Ordner ```config``` erstellen und sich dann Beenden. In diesem werden die Dateien ```config.cfg``` und ```calender.cfg``` erstellt.<br>
 <br>
 Verändere folgende Felder nach der untenstehenden Beschreibung.
