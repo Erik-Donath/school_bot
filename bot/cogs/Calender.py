@@ -10,6 +10,8 @@ class Calender(commands.Cog):
     config: Cfg.Config
     api: Moodle.MoodleAPI
 
+    last_message: discord.Message = None
+
     def __init__(self, bot: discord.Bot, config: Cfg.Config) -> None:
         self.bot = bot
         self.config = config
@@ -58,6 +60,8 @@ class Calender(commands.Cog):
         if channel is None:
             print(f"Channel {channel_id} not found.")
             return
+        if self.last_message:
+            await self.last_message.delete()
         entries = await self.api.parse_calender(Moodle.PW_All, Moodle.PT_RECENTUPCOMING)
 
         embed = discord.Embed(
@@ -82,7 +86,7 @@ class Calender(commands.Cog):
                 inline=False
             )
 
-        await channel.send(embed=embed)
+        self.last_message = await channel.send(embed=embed)
 
 
 def setup(bot: discord.Bot) -> None:
