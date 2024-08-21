@@ -1,10 +1,9 @@
-#!/bin/python3
 import locale
 import datetime
 
 import discord
 
-import Config as Cfg
+import bot.Config as Cfg
 
 
 class Bot(discord.Bot):
@@ -36,7 +35,7 @@ def main() -> None:
     bot = Bot(config)
 
     try:
-        bot.load_extension("cogs.Calender")
+        bot.load_extension("bot.cogs.Calender")
         bot.run(config.getValue("Discord", "token"))
     except discord.errors.LoginFailure:
         print("Login failed")
@@ -44,7 +43,3 @@ def main() -> None:
         print(f"Failed to run Bot.\n{e}")
     finally:
         print("Bot about to stop")
-
-
-if __name__ == "__main__":
-    main()

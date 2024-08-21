@@ -103,6 +103,6 @@ def setup(bot: discord.Bot) -> None:
         ("Welcome", "description"): "Die Nächste Nachricht beinhaltet alle aktuellen Aufgaben",
     })
 
-    if config.getValue("Channel", "purge") == "true":
+    if config.getValue("Moodle", "enabled") == "true":
         bot.add_cog(Calender(bot, config))
         print("Moodle cog started")
