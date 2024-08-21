@@ -60,8 +60,6 @@ class Calender(commands.Cog):
         if channel is None:
             print(f"Channel {channel_id} not found.")
             return
-        if self.last_message:
-            await self.last_message.delete()
         entries = await self.api.parse_calender(Moodle.PW_All, Moodle.PT_RECENTUPCOMING)
 
         embed = discord.Embed(
@@ -85,7 +83,9 @@ class Calender(commands.Cog):
                 value="",
                 inline=False
             )
-
+        
+        if self.last_message:
+            await self.last_message.delete()
         self.last_message = await channel.send(embed=embed)
 
 
