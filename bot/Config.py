@@ -12,7 +12,7 @@ class Config:
 
         if not osp.isfile(path):
             os.makedirs(osp.dirname(osp.abspath(path)), exist_ok=True)
-            open(path, 'x', encoding="utf-8").close() # Create file if not exist
+            open(path, 'x', encoding="utf-8").close()  # Create file if not exist
 
         self.fp = open(path, 'r+', encoding="utf-8")
         self.fp.seek(0)

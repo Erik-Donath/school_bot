@@ -72,7 +72,7 @@ class MoodleAPI:
                         print("Failed to fetch Moodle api. Invalid authentication.")
                         return None
                     resp.close()
-                await  session.close()
+                await session.close()
             return result
         except Exception as e:
             print(f"Failed to fetch Moodle api. Exception: {e}")
