@@ -19,7 +19,7 @@ class Config:
         self.parser.read_file(self.fp)
         self.setDefaultValues(defaults)
 
-    def __del__(self):
+    def __del__(self) -> None:
         self.fp.seek(0)
         self.parser.write(self.fp)
         self.fp.close()

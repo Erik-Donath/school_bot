@@ -142,4 +142,4 @@ cython_debug/
 .idea/
 .vs/
 
-config/config.cfg
+config/
